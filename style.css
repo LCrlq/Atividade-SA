@@ -1,182 +1,255 @@
-/* Definições Globais e Reset */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root{--primary-color:#001f3f;--accent-color:#FFDC00;--text-color:#333;--light-bg:#f4f4f9;--card-bg:#fff;--shadow-color:rgba(0,0,0,.1)}body{font-family:Verdana,Arial,sans-serif;margin:0;padding:0;color:var(--text-color);background-color:var(--light-bg)}.container{width:90%;max-width:1200px;margin:0 auto;padding:20px 0 50px}.header{display:flex;justify-content:space-between;align-items:center;padding:15px 5%;background-color:var(--primary-color);color:var(--light-bg);box-shadow:0 2px 4px var(--shadow-color)}.logo{font-size:1.8em;font-weight:700;color:var(--accent-color);letter-spacing:1px}.nav{display:flex;align-items:center;gap:25px}.nav a{text-decoration:none;color:var(--light-bg);font-size:.95em;transition:color .3s}.nav a:hover{color:var(--accent-color)}.login-btn{padding:8px 18px;background-color:var(--accent-color);color:var(--primary-color);border:none;cursor:pointer;font-size:.9em;font-weight:700;border-radius:4px;transition:background-color .3s,transform .2s}.login-btn:hover{background-color:#e6c500;transform:translateY(-1px)}.hero{text-align:center;padding:80px 0 40px}.hero h1{font-size:3.5em;margin-bottom:10px;text-transform:uppercase;letter-spacing:5px;color:var(--primary-color)}.hero p{color:#666;margin-bottom:30px;font-size:1.1em}.cta-link{display:inline-block;padding:12px 30px;background-color:var(--primary-color);border:2px solid var(--primary-color);color:var(--light-bg);text-decoration:none;font-weight:700;border-radius:5px;transition:background-color .3s,color .3s}.cta-link:hover{background-color:transparent;color:var(--primary-color)}.section-title{font-size:2em;margin:50px 0 25px;color:var(--primary-color);border-bottom:3px solid var(--accent-color);display:inline-block;padding-bottom:5px}.product-section,.vendors-section{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}.vendors-section{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));text-align:center}.product-card{background-color:var(--card-bg);border-radius:8px;overflow:hidden;box-shadow:0 4px 12px var(--shadow-color);transition:transform .3s}.product-card:hover{transform:translateY(-5px);box-shadow:0 8px 16px rgba(0,31,63,.2)}.image-placeholder{background-color:var(--light-bg);height:180px;width:100%;border-bottom:1px solid #ddd}.product-info{padding:15px;display:flex;justify-content:space-between;align-items:center;gap:8px 10px}.info-label{font-weight:600;color:var(--primary-color)}.info-value{font-weight:700;text-align:right}.price{color:var(--accent-color);font-size:1.1em}.buy-btn{display:block;width:calc(100% - 30px);padding:10px;background-color:var(--accent-color);color:var(--primary-color);border:none;cursor:pointer;font-weight:700;border-radius:4px;margin:10px 15px 15px 15px;transition:background-color .2s}.buy-btn:hover{background-color:#e6c500}.vendors-description{text-align:center;margin:0 auto 30px;font-size:1em;color:#666;max-width:600px}.vendor-card{background-color:var(--card-bg);padding:15px;border-radius:8px;box-shadow:0 2px 8px var(--shadow-color)}.vendor-card .image-placeholder{height:150px;width:150px;border-radius:50%;margin:0 auto 10px;background-color:#ddd}.vendor-name{font-size:1.2em;font-weight:700;color:var(--primary-color);margin-top:5px}#containerCarros img,#containerMotos img,.product-card img{width:100%;height:180px;object-fit:cover;display:block}#containerVendedores img{width:150px;height:150px;object-fit:cover;border-radius:50%;display:block;margin:0 auto 10px}img{max-width:100%;height:auto}.product-name{font-weight:600;color:var(--primary-color);margin:0}.product-price{font-weight:700;color:var(--accent-color);margin:0}
+:root {
+    --primary-color: #001f3f;
+    --accent-color: #FFDC00;
+    --text-color: #333;
+    --light-bg: #f4f4f9;
+    --card-bg: #fff;
+    --shadow-color: rgba(0, 0, 0, .1)
 }
 
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Verdana', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--light-bg)
 }
 
 .container {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 20px 0 50px
 }
 
-/* -------------------- Cabeçalho (Header) -------------------- */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    border-bottom: 1px solid #ddd;
+    padding: 15px 5%;
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+    box-shadow: 0 2px 4px var(--shadow-color)
 }
 
 .logo {
+    font-size: 1.8em;
     font-weight: bold;
-    font-size: 1.2em;
+    color: var(--accent-color);
+    letter-spacing: 1px
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 25px
 }
 
 .nav a {
     text-decoration: none;
-    color: #333;
-    margin-left: 20px;
+    color: var(--light-bg);
+    font-size: 1.1em;
+    transition: color .3s
+}
+
+.nav a:hover {
+    color: var(--accent-color)
 }
 
 .login-btn {
-    background: none;
-    border: 1px solid #333;
-    padding: 5px 15px;
+    padding: 8px 18px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
     cursor: pointer;
-    margin-left: 10px;
+    font-size: .9em;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color .3s, transform .2s
 }
 
-/* -------------------- Hero Section (Título) -------------------- */
+.login-btn:hover {
+    background-color: #e6c500;
+    transform: translateY(-1px)
+}
+
 .hero {
     text-align: center;
-    padding: 80px 0 50px;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 40px;
+    padding: 80px 0 40px
 }
 
 .hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--primary-color)
 }
 
 .hero p {
-    margin-bottom: 5px;
-    font-size: 0.9em;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1em
 }
 
 .cta-link {
     display: inline-block;
-    margin-top: 20px;
-    color: #333;
-    text-decoration: underline;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    color: var(--light-bg);
+    text-decoration: none;
     font-weight: bold;
-    font-size: 0.9em;
+    border-radius: 5px;
+    transition: background-color .3s, color .3s
 }
 
-/* -------------------- Seções de Produto (Carros e Motos) -------------------- */
-.product-section {
-    margin-bottom: 40px;
+.cta-link:hover {
+    background-color: transparent;
+    color: var(--primary-color)
 }
 
 .section-title {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    font-weight: normal;
+    font-size: 2em;
+    margin: 50px 0 25px;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px
 }
 
-.product-grid {
-    display: flex; /* Usando flexbox para o layout horizontal */
-    gap: 20px;
-    overflow-x: auto; /* Permite scroll horizontal se necessário */
-    padding-bottom: 10px;
+.product-section,
+.vendors-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px
+}
+
+.vendors-section {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    text-align: center
 }
 
 .product-card {
-    width: 250px; /* Largura fixa para replicar o wireframe */
-    flex-shrink: 0;
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: transform .3s
 }
 
-.product-placeholder {
-    height: 150px;
-    background-color: #eee; /* Cor de placeholder */
-    margin-bottom: 10px;
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 31, 63, .2)
+}
+
+.image-placeholder {
+    background-color: var(--light-bg);
+    height: 180px;
+    width: 100%;
+    border-bottom: 1px solid #ddd
 }
 
 .product-info {
+    padding: 15px;
+    /* Tornar linha com nome à esquerda e preço à direita */
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 0.9em;
+    align-items: center;
+    gap: 8px 10px;
+}
+
+.info-label {
+    font-weight: 600;
+    color: var(--primary-color)
+}
+
+.info-value {
+    font-weight: bold;
+    text-align: right
+}
+
+.price {
+    color: var(--accent-color);
+    font-size: 1.1em
 }
 
 .buy-btn {
-    width: 100%;
-    padding: 8px 0;
-    background-color: #eee;
-    border: 1px solid #ddd;
+    /* Botão ocupa largura total do card e fica abaixo da info */
+    display: block;
+    width: calc(100% - 30px); /* leva em conta padding do card */
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
     cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 10px 15px 15px 15px;
+    transition: background-color .2s
 }
 
-/* -------------------- Seção de Vendedores -------------------- */
-.vendors-section {
-    text-align: center;
-    padding: 40px 0;
-    margin-top: 40px;
-    border-top: 1px solid #ddd;
+.buy-btn:hover {
+    background-color: #e6c500
 }
 
 .vendors-description {
-    max-width: 700px;
-    margin: 10px auto 30px;
-    font-size: 0.9em;
-}
-
-.vendors-grid {
-    display: flex; /* Usando flexbox */
-    justify-content: space-between;
-    gap: 20px;
+    text-align: center;
+    margin: 0 auto 30px;
+    font-size: 1em;
+    color: #666;
+    max-width: 600px
 }
 
 .vendor-card {
-    flex: 1; /* Distribui o espaço igualmente */
-    min-width: 200px;
-    text-align: center;
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-color)
 }
 
-.vendor-placeholder {
-    height: 250px;
-    background-color: #eee; /* Cor de placeholder */
-    margin-bottom: 10px;
+.vendor-card .image-placeholder {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    background-color: #ddd
 }
 
 .vendor-name {
+    font-size: 1.2em;
     font-weight: bold;
-    font-size: 0.9em;
+    color: var(--primary-color);
+    margin-top: 5px
 }
 
-/* -------------------- Responsividade Básica -------------------- */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        padding: 15px 5%;
-    }
+#containerCarros img,
+#containerMotos img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block
+}
 
-    .nav {
-        margin-top: 10px;
-    }
+/* Garantir que imagens dentro de product-card usem as mesmas regras */
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
 
-    .vendors-grid, .product-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
+#containerVendedores img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px
+}
 
-    .product-card {
-        width: 100%; /* Permite que cards menores se ajustem em 2 colunas */
-    }
+img {
+    max-width: 100%;
+    height: auto
 }
