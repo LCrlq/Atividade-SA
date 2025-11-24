@@ -1,27 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>atividade-sa</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <nav class="navegador">
-        <ul>
-            <li>Contato</li>
-            <li>Serviço</li>
-            <li>Sobre</li>
-            <li>Login</li>
-        </ul>
-    </nav>
-    
-    <div>
+    <header>
         <h1>CarStore</h1>
-        <p>Zero burocracia, 100% satisfação na garagem</p>
-        <button class="bt">Compre agora</button>
-    </div>
+        <nav>
+            <a href="#">Contato</a>
+            <a href="#">Serviço</a>
+            <a href="#">Sobre</a>
+            <button id="login-btn">Login</button>
+        </nav>
+    </header>
 
+    <main>
+        <section class="titulo">
+            <h2>CarStore</h2>
+            <p>Zero burocracia, 100% satisfação na garagem</p>
+        </section>
 
+        <section class="produtos">
+            <h3>Compre Agora</h3>
+
+            <div class="categoria">
+                <h4>Carros</h4>
+                <div id="carros-container" class="grid">
+                    <div class="carro">
+                        <img src="" alt="">
+                        <h5>Nome</h5>
+                        <p>Preço</p>
+                        <button>Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="categoria">
+                <h4>Motos</h4>
+                <div id="motos-container" class="grid"></div>
+            </div>
+        </section>
+
+        <section class="vendedores">
+            <h3>VENDEDORES</h3>
+            <p>Conheça nossa equipe de especialistas em vendas.</p>
+            <div id="vendedores-container" class="grid"></div>
+        </section>
+    </main>
 </body>
+<script src="script.js"></script>
+
 </html>
