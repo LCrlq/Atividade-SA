@@ -1,58 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>atividade-sa</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <h1>CarStore</h1>
-        <nav>
+    <header class="header">
+        <div class="logo">Logo</div>
+        <nav class="nav">
             <a href="#">Contato</a>
             <a href="#">Serviço</a>
             <a href="#">Sobre</a>
-            <button id="login-btn">Login</button>
+            <button class="login-btn">Login</button>
         </nav>
     </header>
-
-    <main>
-        <section class="titulo">
-            <h2>CarStore</h2>
-            <p>Zero burocracia, 100% satisfação na garagem</p>
+ 
+    <main class="container">
+        <section class="hero">
+            <h1>AutoStore</h1>
+            <p></p>
+            <p></p>
+            <a href="#" class="cta-link">Compre Agora</a>
         </section>
-
-        <section class="produtos">
-            <h3>Compre Agora</h3>
-
-            <div class="categoria">
-                <h4>Carros</h4>
-                <div id="carros-container" class="grid">
-                    <div class="carro">
-                        <img src="" alt="">
-                        <h5>Nome</h5>
-                        <p>Preço</p>
-                        <button>Comprar</button>
+ 
+        <section class="product-section">
+            <h2 class="section-title">Carros</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-placeholder"></div>
+                    <div class="product-info">
+                        <span class="product-name">Nome</span>
+                        <span class="product-price">Preço</span>
                     </div>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-placeholder"></div>
+                    <div class="product-info">
+                        <span class="product-name">Nome</span>
+                        <span class="product-price">Preço</span>
+                    </div>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-placeholder"></div>
+                    <div class="product-info">
+                        <span class="product-name">Nome</span>
+                        <span class="product-price">Preço</span>
+                    </div>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-placeholder"></div>
+                    <div class="product-info">
+                        <span class="product-name">Nome</span>
+                        <span class="product-price">Preço</span>
+                    </div>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+        </section>
+ 
+        <section class="product-section">
+            <h2 class="section-title">Motos</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-placeholder"></div>
+                    <div class="product-info">
+                        <span class="product-name">Nome</span>
+                        <span class="product-price">Preço</span>
+                    </div>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-placeholder"></div>
+                    <div class="product-info">
+                        <span class="product-name">Nome</span>
+                        <span class="product-price">Preço</span>
+                    </div>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-placeholder"></div>
+                    <div class="product-info">
+                        <span class="product-name">Nome</span>
+                        <span class="product-price">Preço</span>
+                    </div>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-placeholder"></div>
+                    <div class="product-info">
+                        <span class="product-name">Nome</span>
+                        <span class="product-price">Preço</span>
+                    </div>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+        </section>
+ 
+        <section class="vendors-section">
+            <h2 class="section-title">VENDEDORES</h2>
+            <p class="vendors-description">Nossos vendedores são especialistas pelo que fazem e estão sempre prontos para ajudar você a encontrar exatamente o que procura.</p>
+            <div class="vendors-grid">
+                <div class="vendor-card">
+                    <div class="vendor-placeholder"></div>
+                    <span class="vendor-name">Vendedor1</span>
+                </div>
+                <div class="vendor-card">
+                    <div class="vendor-placeholder"></div>
+                    <span class="vendor-name">Vendedor2</span>
+                </div>
+                <div class="vendor-card">
+                    <div class="vendor-placeholder"></div>
+                    <span class="vendor-name">Vendedor3</span>
+                </div>
+                <div class="vendor-card">
+                    <div class="vendor-placeholder"></div>
+                    <span class="vendor-name">Vendedor4</span>
                 </div>
             </div>
-
-            <div class="categoria">
-                <h4>Motos</h4>
-                <div id="motos-container" class="grid"></div>
-            </div>
-        </section>
-
-        <section class="vendedores">
-            <h3>VENDEDORES</h3>
-            <p>Conheça nossa equipe de especialistas em vendas.</p>
-            <div id="vendedores-container" class="grid"></div>
         </section>
     </main>
 </body>
-<script src="script.js"></script>
-
 </html>
