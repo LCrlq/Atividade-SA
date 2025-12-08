@@ -1,5 +1,5 @@
 function buscarMoto() {
-    fetch("http://10.92.199.53:3000/carros")
+    fetch("http://10.92.199.13:3000/carros")
         .then((res) => res.json())
         .then((data) => {
  
@@ -26,7 +26,7 @@ function buscarMoto() {
 }
  
 function buscarCarro() {
-    fetch("http://10.92.199.53:3000/motos")
+    fetch("http://10.92.199.13:3000/motos")
         .then((res) => res.json())
         .then((data) => {
  
@@ -53,7 +53,7 @@ function buscarCarro() {
 }
  
 function buscarVendedores() {
-    fetch("http://10.92.199.53:3000/vendedores")
+    fetch("http://10.92.199.13:3000/vendedores")
         .then((res) => res.json())
         .then((data) => {
  
